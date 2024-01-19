@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
+    public PlayerMovement Movement;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy Body"))
         {
+            Debug.Log("Death");
             Die();
         }
     }
 
     void Die()
     {
-        GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<Rigidbody>().isKinematic = true;
-        GetComponent<PlayerMovement>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        //gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        Movement.enabled = false;
     }
 }
