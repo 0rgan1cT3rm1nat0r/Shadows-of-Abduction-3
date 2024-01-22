@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
     public PlayerMovement Movement;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Enemy Body"))
         {
@@ -16,8 +17,10 @@ public class PlayerLife : MonoBehaviour
 
     void Die()
     {
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        //gameObject.GetComponent<MeshRenderer>().enabled = false;
         //gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        Movement.enabled = false;
+        //Movement.enabled = false;
+        SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }
 }
+
