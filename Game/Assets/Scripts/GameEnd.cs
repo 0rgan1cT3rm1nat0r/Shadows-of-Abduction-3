@@ -16,5 +16,7 @@ public class GameEnd : MonoBehaviour
     void End()
     {
         SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

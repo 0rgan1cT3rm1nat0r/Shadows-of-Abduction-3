@@ -12,7 +12,18 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+    }
+    public void End()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
+    }
     public void Option()
     {
         OptionPanel.alpha = 1;

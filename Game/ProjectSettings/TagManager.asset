@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy Body
   - Goal
+  - Next Level
   layers:
   - Default
   - TransparentFX

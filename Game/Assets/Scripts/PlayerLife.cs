@@ -21,6 +21,8 @@ public class PlayerLife : MonoBehaviour
         //gameObject.GetComponent<Rigidbody>().isKinematic = true;
         //Movement.enabled = false;
         SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
 
